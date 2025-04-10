@@ -24,48 +24,40 @@ Make sure you have Python 3 installed along with the required libraries. You can
 
 ```bash
 pip install numpy pandas matplotlib
-
-Usage
-Data Loading:
+```
+# Usage
+### Data Loading:
 The MNIST dataset is loaded directly from IDX files into a Pandas DataFrame. The images are normalized to ensure numerical stability during training.
 
-Training:
+### Training:
 Instantiate the neural network (e.g., using the custom SinLog activation) and start training:
 
-python
-Copy
-# Example for training the SinLog Neural Network
+
+## Example for training the SinLog Neural Network
+```bash
 sinlognn = SinLog_NeuralNetwork(epochs=100, batch_size=64, learning_rate=0.1)
 sinlognn.train(df)
 print("SinLog Neural Network Training Completed")
-Prediction and Evaluation:
+```
+### Prediction and Evaluation:
 After training, predictions are made on test data, and accuracy is computed by comparing the network's predictions to the true labels:
 
-python
-Copy
+```bash
 sinlog_prediction = sinlognn.predict(df)
-# Accuracy calculation loop is provided in the code.
-Comparison:
-The network's performance with the custom SinLog activation function is compared with that using Sigmoid, Leaky ReLU, and Softmax.
+```
 
-Project Structure
-Neural Network Implementation:
+# Project Structure
+#### Neural Network Implementation:
 The core neural network code is implemented with classes for layers and the network as a whole. It includes the complete forward and backward propagation logic.
 
-Custom Activation (SinLog):
+#### Custom Activation (SinLog):
 The SinLog activation function applies a sine operation for negative inputs and a logarithmic operation for non-negative inputs, along with an appropriately defined derivative for backpropagation.
 
-Data Handling:
+#### Dataset:
 Functions to load and process the MNIST dataset from IDX files are provided. The data is normalized and then fed into the network.
 
-Evaluation Script:
+#### Evaluation Script:
 There is a section in the code that evaluates the network's predictions and compares the accuracies of the different activation functions.
-
-Acknowledgements
-This project is inspired by fundamental deep learning techniques as discussed in textbooks like Deep Learning by Goodfellow, Bengio, and Courville. It represents one of my first projects in machine learning and neural network implementation.
-
-Contributing
-Since this is my first submission on GitHub, I am open to feedback and contributions to improve the quality and performance of the code. Please feel free to fork the repository and submit pull requests.
 
 Contact
 Armaan Mahajan
