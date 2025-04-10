@@ -60,7 +60,9 @@ Functions to load and process the MNIST dataset from IDX files are provided. The
 There is a section in the code that evaluates the network's predictions and compares the accuracies of the different activation functions.
 
 Contact
-Armaan Mahajan
+
+**Armaan Mahajan**
+
 Email: armaanmahajanbg@gmail.com
 
 Thank you for checking out my project! 
